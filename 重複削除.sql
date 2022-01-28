@@ -1,0 +1,1 @@
+DELETE FROM table_name WHERE ID NOT IN (SELECT max_id from (SELECT max(ID) max_id FROM table_name GROUP BY customer_number) tmp)
